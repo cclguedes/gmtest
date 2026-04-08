@@ -77,19 +77,14 @@ html {
 :root.theme-light:not(body) {
     --color-text-main: #f0f0f0;
     --color-bg-main: #121212;
-
-    /* 🔁 ALTERADO: rosa → laranja */
-    --color-primary: #f57c00;
-    --color-primary-hover: #ff9800;
-    --color-primary-active: #e65100;
-
-    --color-accent: #f57c00;
-    --color-accent-hover: #ff9800;
-    --color-accent-active: #e65100;
-
+    --color-primary: #D04A2B;
+    --color-primary-hover: #df8be0;
+    --color-primary-active: #b645b2;
+    --color-accent: #D04A2B;
+    --color-accent-hover: #872F1C;
+    --color-accent-active: ##DB6B51;
     --color-secondary: #a0a0a0;
-    --color-active: #f57c00;
-
+    --color-active: #D04A2B;
     --color-disabled: #3d3d3d;
     --color-disabled-bg: var(--color-secondary);
     --color-denied: var(--color-danger);
@@ -184,4 +179,61 @@ html {
     --trouve-bootstrap-navbar-brand-bg: transparent;
     --trouve-bootstrap-navbar-bg: var(--color-dark);
     --trouve-ng-select-dropdown-panel-bg: var(--color-dark3)
+}
+
+:root .theme-broadcaster .theme-dark2 .input-group-text,
+:root .theme-broadcaster.theme-dark2:not(body) .input-group-text,
+:root .theme-broadcaster .theme-dark3 .input-group-text,
+:root .theme-broadcaster.theme-dark3:not(body) .input-group-text,
+:root .theme-broadcaster .theme-dark .input-group-text,
+:root .theme-broadcaster.theme-dark:not(body) .input-group-text,
+:root .theme-broadcaster .theme-light .input-group-text,
+:root .theme-broadcaster.theme-light:not(body) .input-group-text,
+:root .theme-dark2 .input-group-text,
+:root.theme-dark2:not(body) .input-group-text,
+:root .theme-dark3 .input-group-text,
+:root.theme-dark3:not(body) .input-group-text,
+:root .theme-dark .input-group-text,
+:root.theme-dark:not(body) .input-group-text,
+:root .theme-light .input-group-text,
+:root.theme-light:not(body) .input-group-text {
+    color: var(--color-text-main)
+}
+
+:root .theme-broadcaster .theme-dark2 .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster.theme-dark2:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster .theme-dark3 .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster.theme-dark3:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster .theme-dark .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster.theme-dark:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster .theme-light .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster.theme-light:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-dark2 .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root.theme-dark2:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-dark3 .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root.theme-dark3:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-dark .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root.theme-dark:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-light .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root.theme-light:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled {
+    color: #929292
+}
+
+:root .theme-broadcaster .theme-light .navigable-layout-zone-group-body:first-child h6,
+:root .theme-broadcaster .theme-light .navigable-layout-zone-group-title,
+:root .theme-broadcaster.theme-light:not(body) .navigable-layout-zone-group-body:first-child h6,
+:root .theme-broadcaster.theme-light:not(body) .navigable-layout-zone-group-title,
+:root .theme-light .navigable-layout-zone-group-body:first-child h6,
+:root .theme-light .navigable-layout-zone-group-title,
+:root.theme-light:not(body) .navigable-layout-zone-group-body:first-child h6,
+:root.theme-light:not(body) .navigable-layout-zone-group-title {
+    color: var(--color-text-main)
+}
+
+:root .theme-broadcaster bs-datepicker-container .theme-green,
+:root .theme-broadcaster bs-datepicker-inline-container .theme-green,
+:root bs-datepicker-container .theme-green,
+:root bs-datepicker-inline-container .theme-green {
+    --color-text-main: #f0f0f0;
+    --color-disabled: #3d3d3d
 }
