@@ -1,0 +1,187 @@
+body,
+html {
+    background-color: #121212;
+    color: #e0e0e0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+.static-splashscreen {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+@keyframes splashscreen-loading {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.splashscreen-background {
+    animation-duration: 1s;
+    animation-name: splashscreen-loading;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.right-column {
+    background-color: #1a1a1a;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, .8);
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 25%
+}
+
+.right-column img {
+    filter: brightness(0) invert(1)
+}
+
+.static-splashscreen img {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+:root .theme-broadcaster .theme-dark,
+:root .theme-broadcaster .theme-dark2,
+:root .theme-broadcaster.theme-dark2:not(body),
+:root .theme-broadcaster .theme-dark3,
+:root .theme-broadcaster.theme-dark3:not(body),
+:root .theme-broadcaster.theme-dark:not(body),
+:root .theme-broadcaster .theme-light,
+:root .theme-broadcaster.theme-light:not(body),
+:root .theme-dark,
+:root .theme-dark2,
+:root.theme-dark2:not(body),
+:root .theme-dark3,
+:root.theme-dark3:not(body),
+:root.theme-dark:not(body),
+:root .theme-light,
+:root.theme-light:not(body) {
+    --color-text-main: #f0f0f0;
+    --color-bg-main: #121212;
+
+    /* 🔁 ALTERADO: rosa → laranja */
+    --color-primary: #f57c00;
+    --color-primary-hover: #ff9800;
+    --color-primary-active: #e65100;
+
+    --color-accent: #f57c00;
+    --color-accent-hover: #ff9800;
+    --color-accent-active: #e65100;
+
+    --color-secondary: #a0a0a0;
+    --color-active: #f57c00;
+
+    --color-disabled: #3d3d3d;
+    --color-disabled-bg: var(--color-secondary);
+    --color-denied: var(--color-danger);
+    --color-pending: var(--color-warning);
+    --color-light: #2c2c2c;
+    --color-light2: #383838;
+    --color-medium: #888888;
+    --color-medium-active: hsla(0, 0%, 91%, 0.05);
+    --color-medium2: #888888;
+    --color-medium2-active: hsla(0, 0%, 91%, 0.05);
+    --color-dark: #1b1b1b;
+    --color-dark2: #121212;
+    --color-dark3: #0a0a0a;
+    --color-placeholder: #737373;
+    --color-separator: var(--color-medium2);
+    --trouve-theme-bg: #121212;
+    --trouve-theme-light-on-dark: var(--color-text-main);
+    --trouve-theme-text-color-inverse: #171717;
+    --trouve-theme-dropdown-bg: var(--color-dark);
+    --trouve-theme-dropdown-header-text-color: var(--color-medium);
+    --trouve-theme-spinner-color-1: var(--color-medium);
+    --trouve-theme-focus-color: hsla(0, 0%, 100%, 0.2);
+    --trouve-theme-hover-bg: hsla(0, 0%, 100%, 0.05);
+    --trouve-theme-selected-bg: transparent;
+    --trouve-form-check-readonly-bg: #e5e5e5;
+    --trouve-form-check-readonly-color: var(--color-dark2);
+    --trouve-edit-field-focus-bg: var(--color-dark2);
+    --trouve-edit-field-focus-color: var(--color-text-main);
+    --pm-empty-view-icon-color: var(--color-text-main);
+    --pm-empty-view-title-color: var(--color-text-main);
+    --pm-empty-view-message-color: var(--color-medium);
+    --pm-type-selector-tree-bg: var(--color-dark3);
+    --trouve-type-selector-tree-text-color: var(--color-medium);
+    --pm-type-selector-dropdown-tree-toggler-color: var(--color-light);
+    --trouve-type-selector-tree-selected-bg: var(--trouve-theme-selected-bg);
+    --pm-entity-bg: "";
+    --pm-entity-active-bg: "";
+    --pm-entity-description-color: var(--color-medium);
+    --trouve-label-tag-remove-button-hover-background-color: var(--color-secondary);
+    --trouve-label-tag-value-hover-border-color: var(--color-primary-hover);
+    --trouve-label-tag-value-active-border-color: var(--color-primary-active);
+    --trouve-label-tag-value-active-color: var(--color-primary-active);
+    --trouve-label-tag-button-bg: transparent;
+    --trouve-label-tag-button-color: var(--color-text-main);
+    --trouve-label-tag-border-color: var(--color-medium);
+    --trouve-label-tag-placeholder-color: var(--color-placeholder);
+    --trouve-node-edition-layout-label-tag-color: var(--color-light);
+    --trouve-node-edition-layout-label-tag-color-opened: var(--color-dark3);
+    --trouve-node-edition-layout-label-tag-action-remove-color: var(--color-text-main);
+    --trouve-bucket-text-color: var(--color-medium);
+    --trouve-bucket-selected-color: var(--color-primary);
+    --pm-sidebar-header-bg: var(--color-dark);
+    --pm-sidebar-header-text-color: var(--color-text-main);
+    --pm-sidebar-action-button-wrapper-bg: var(--color-dark);
+    --pm-action-button-wrapper-button-color: var(--color-medium);
+    --pm-quickview-header-bg: var(--color-dark);
+    --pm-quickview-header-text-color: var(--color-text-main);
+    --pm-quickview-content-bg: var(--color-dark);
+    --trouve-quickview-modal-bg: var(--color-dark3);
+    --pm-right-detail-bg: var(--color-dark3);
+    --pm-cascading-menu-list-level1-bg-color: var(--color-dark);
+    --pm-cascading-menu-list-level2-bg-color: var(--color-dark2);
+    --pm-cascading-menu-list-level3-bg-color: var(--color-dark3);
+    --trouve-node-item-selected-bg: var(--color-primary);
+    --trouve-node-item-selected-label-color: var(--color-bg-main);
+    --trouve-node-item-selected-border-color: var(--color-accent);
+    --trouve-node-select-filters-bg: var(--color-dark3);
+    --trouve-node-select-filters-datepicker-head-bg: var(--color-dark);
+    --pm-property-string-link-border-color: var(--color-light);
+    --pm-search-sort-selector-btn-color: "";
+    --trouve-node-page-bg: transparent;
+    --trouve-node-page-rights-bg: var(--color-dark2);
+    --trouve-node-page-2col-layout-left-title-bg: rgba(255, 255, 255, 0.05);
+    --trouve-node-page-section-header-bg: hsla(0, 0%, 100%, 0.05);
+    --trouve-node-page-2col-layout-right-col-bg: rgba(255, 255, 255, 0.02);
+    --trouve-navbar-placeholder-color: var(--color-placeholder);
+    --trouve-navbar-separator-color: var(--color-medium);
+    --trouve-navbar-item-color: var(--color-medium);
+    --trouve-navbar-item-hover-color: var(--color-primary-hover);
+    --trouve-navbar-item-active-color: var(--color-primary-active);
+    --trouve-navbar-primary-action-color: var(--color-primary);
+    --trouve-navbar-primary-action-hover-color: var(--color-primary-hover);
+    --trouve-navbar-primary-action-active-color: var(--color-primary-active);
+    --trouve-navlink-item-color: var(--color-medium);
+    --trouve-navlink-hover-color: var(--color-primary-hover);
+    --trouve-navlink-active-color: var(--color-primary-active);
+    --trouve-navlink-disabled-color: var(--color-light);
+    --trouve-perfect-scrollbar-bg-color: var(--color-dark);
+    --trouve-bootstrap-h1-bg: transparent;
+    --trouve-bootstrap-h1-text-color: var(--color-text-main);
+    --trouve-bootstrap-result-h1-bg: var(--color-dark);
+    --trouve-bootstrap-navbar-brand-bg: transparent;
+    --trouve-bootstrap-navbar-bg: var(--color-dark);
+    --trouve-ng-select-dropdown-panel-bg: var(--color-dark3)
+}
