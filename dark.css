@@ -1,130 +1,239 @@
-
-/*
- Dark Theme Override
- Generated from the CSS snippet provided.
-
- Base colors:
- - Background: #171717
- - Secondary Background: #1A1E20
- - Accent: #05A6FF
-*/
-
-body,html{
-    background-color:#171717;
-    height:100%;
-    margin:0;
-    padding:0;
-    width:100%;
+body,
+html {
+    background-color: #121212;
+    color: #e0e0e0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%
 }
 
-.static-splashscreen{
-    height:100%;
-    overflow:hidden;
-    position:relative;
-    width:100%;
+.static-splashscreen {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%
 }
 
-.splashscreen-background{
-    background-position:50%;
-    background-repeat:no-repeat;
-    background-size:cover;
-    height:100%;
-    left:0;
-    position:absolute;
-    top:0;
-    width:100%;
+@keyframes splashscreen-loading {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
-.right-column{
-    background-color:#1A1E20;
-    box-shadow:-5px 0 20px rgba(0,0,0,.75);
-    height:100%;
-    position:fixed;
-    right:0;
-    top:0;
-    width:25%;
+.splashscreen-background {
+    animation-duration: 1s;
+    animation-name: splashscreen-loading;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
 }
 
-.right-column img{
-    filter:brightness(1);
+.right-column {
+    background-color: #1a1a1a;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, .8);
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 25%
 }
 
-:root{
-    --color-text-main:#F5F5F5;
+.right-column img {
+    filter: brightness(0) invert(1)
+}
 
-    --color-bg-main:#171717;
+.static-splashscreen img {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
 
-    --color-primary:#05A6FF;
-    --color-primary-hover:#37B9FF;
-    --color-primary-active:#0287D1;
+:root .theme-broadcaster .theme-dark,
+:root .theme-broadcaster .theme-dark2,
+:root .theme-broadcaster.theme-dark2:not(body),
+:root .theme-broadcaster .theme-dark3,
+:root .theme-broadcaster.theme-dark3:not(body),
+:root .theme-broadcaster.theme-dark:not(body),
+:root .theme-broadcaster .theme-light,
+:root .theme-broadcaster.theme-light:not(body),
+:root .theme-dark,
+:root .theme-dark2,
+:root.theme-dark2:not(body),
+:root .theme-dark3,
+:root.theme-dark3:not(body),
+:root.theme-dark:not(body),
+:root .theme-light,
+:root.theme-light:not(body) {
+    --color-text-main: #f0f0f0;
+    --color-bg-main: #121212;
+    --color-primary: #0993F0;
+    --color-primary-hover: #3AAAF4;
+    --color-primary-active: #0776C0;
+    --color-accent: #0993F0;
+    --color-accent-hover: #3AAAF4;
+    --color-accent-active: #0776C0;
+    --color-secondary: #a0a0a0;
+    --color-active: #0993F0;
+    --color-disabled: #3d3d3d;
+    --color-disabled-bg: var(--color-secondary);
+    --color-denied: var(--color-danger);
+    --color-pending: var(--color-warning);
+    --color-light: #2c2c2c;
+    --color-light2: #383838;
+    --color-medium: #888888;
+    --color-medium-active: hsla(0, 0%, 91%, 0.05);
+    --color-medium2: #888888;
+    --color-medium2-active: hsla(0, 0%, 91%, 0.05);
+    --color-dark: #1b1b1b;
+    --color-dark2: #121212;
+    --color-dark3: #0a0a0a;
+    --color-placeholder: #737373;
+    --color-separator: var(--color-medium2);
+    --trouve-theme-bg: #121212;
+    --trouve-theme-light-on-dark: var(--color-text-main);
+    --trouve-theme-text-color-inverse: #171717;
+    --trouve-theme-dropdown-bg: var(--color-dark);
+    --trouve-theme-dropdown-header-text-color: var(--color-medium);
+    --trouve-theme-spinner-color-1: var(--color-medium);
+    --trouve-theme-focus-color: hsla(0, 0%, 100%, 0.2);
+    --trouve-theme-hover-bg: hsla(0, 0%, 100%, 0.05);
+    --trouve-theme-selected-bg: transparent;
+    --trouve-form-check-readonly-bg: #e5e5e5;
+    --trouve-form-check-readonly-color: var(--color-dark2);
+    --trouve-edit-field-focus-bg: var(--color-dark2);
+    --trouve-edit-field-focus-color: var(--color-text-main);
+    --pm-empty-view-icon-color: var(--color-text-main);
+    --pm-empty-view-title-color: var(--color-text-main);
+    --pm-empty-view-message-color: var(--color-medium);
+    --pm-type-selector-tree-bg: var(--color-dark3);
+    --trouve-type-selector-tree-text-color: var(--color-medium);
+    --pm-type-selector-dropdown-tree-toggler-color: var(--color-light);
+    --trouve-type-selector-tree-selected-bg: var(--trouve-theme-selected-bg);
+    --pm-entity-bg: "";
+    --pm-entity-active-bg: "";
+    --pm-entity-description-color: var(--color-medium);
+    --trouve-label-tag-remove-button-hover-background-color: var(--color-secondary);
+    --trouve-label-tag-value-hover-border-color: var(--color-primary-hover);
+    --trouve-label-tag-value-active-border-color: var(--color-primary-active);
+    --trouve-label-tag-value-active-color: var(--color-primary-active);
+    --trouve-label-tag-button-bg: transparent;
+    --trouve-label-tag-button-color: var(--color-text-main);
+    --trouve-label-tag-border-color: var(--color-medium);
+    --trouve-label-tag-placeholder-color: var(--color-placeholder);
+    --trouve-node-edition-layout-label-tag-color: var(--color-light);
+    --trouve-node-edition-layout-label-tag-color-opened: var(--color-dark3);
+    --trouve-node-edition-layout-label-tag-action-remove-color: var(--color-text-main);
+    --trouve-bucket-text-color: var(--color-medium);
+    --trouve-bucket-selected-color: var(--color-primary);
+    --pm-sidebar-header-bg: var(--color-dark);
+    --pm-sidebar-header-text-color: var(--color-text-main);
+    --pm-sidebar-action-button-wrapper-bg: var(--color-dark);
+    --pm-action-button-wrapper-button-color: var(--color-medium);
+    --pm-quickview-header-bg: var(--color-dark);
+    --pm-quickview-header-text-color: var(--color-text-main);
+    --pm-quickview-content-bg: var(--color-dark);
+    --trouve-quickview-modal-bg: var(--color-dark3);
+    --pm-right-detail-bg: var(--color-dark3);
+    --pm-cascading-menu-list-level1-bg-color: var(--color-dark);
+    --pm-cascading-menu-list-level2-bg-color: var(--color-dark2);
+    --pm-cascading-menu-list-level3-bg-color: var(--color-dark3);
+    --trouve-node-item-selected-bg: var(--color-primary);
+    --trouve-node-item-selected-label-color: var(--color-bg-main);
+    --trouve-node-item-selected-border-color: var(--color-accent);
+    --trouve-node-select-filters-bg: var(--color-dark3);
+    --trouve-node-select-filters-datepicker-head-bg: var(--color-dark);
+    --pm-property-string-link-border-color: var(--color-light);
+    --pm-search-sort-selector-btn-color: "";
+    --trouve-node-page-bg: transparent;
+    --trouve-node-page-rights-bg: var(--color-dark2);
+    --trouve-node-page-2col-layout-left-title-bg: rgba(255, 255, 255, 0.05);
+    --trouve-node-page-section-header-bg: hsla(0, 0%, 100%, 0.05);
+    --trouve-node-page-2col-layout-right-col-bg: rgba(255, 255, 255, 0.02);
+    --trouve-navbar-placeholder-color: var(--color-placeholder);
+    --trouve-navbar-separator-color: var(--color-medium);
+    --trouve-navbar-item-color: var(--color-medium);
+    --trouve-navbar-item-hover-color: var(--color-primary-hover);
+    --trouve-navbar-item-active-color: var(--color-primary-active);
+    --trouve-navbar-primary-action-color: var(--color-primary);
+    --trouve-navbar-primary-action-hover-color: var(--color-primary-hover);
+    --trouve-navbar-primary-action-active-color: var(--color-primary-active);
+    --trouve-navlink-item-color: var(--color-medium);
+    --trouve-navlink-hover-color: var(--color-primary-hover);
+    --trouve-navlink-active-color: var(--color-primary-active);
+    --trouve-navlink-disabled-color: var(--color-light);
+    --trouve-perfect-scrollbar-bg-color: var(--color-dark);
+    --trouve-bootstrap-h1-bg: transparent;
+    --trouve-bootstrap-h1-text-color: var(--color-text-main);
+    --trouve-bootstrap-result-h1-bg: var(--color-dark);
+    --trouve-bootstrap-navbar-brand-bg: transparent;
+    --trouve-bootstrap-navbar-bg: var(--color-dark);
+    --trouve-ng-select-dropdown-panel-bg: var(--color-dark3)
+}
 
-    --color-accent:#05A6FF;
-    --color-accent-hover:#37B9FF;
-    --color-accent-active:#0287D1;
+:root .theme-broadcaster .theme-dark2 .input-group-text,
+:root .theme-broadcaster.theme-dark2:not(body) .input-group-text,
+:root .theme-broadcaster .theme-dark3 .input-group-text,
+:root .theme-broadcaster.theme-dark3:not(body) .input-group-text,
+:root .theme-broadcaster .theme-dark .input-group-text,
+:root .theme-broadcaster.theme-dark:not(body) .input-group-text,
+:root .theme-broadcaster .theme-light .input-group-text,
+:root .theme-broadcaster.theme-light:not(body) .input-group-text,
+:root .theme-dark2 .input-group-text,
+:root.theme-dark2:not(body) .input-group-text,
+:root .theme-dark3 .input-group-text,
+:root.theme-dark3:not(body) .input-group-text,
+:root .theme-dark .input-group-text,
+:root.theme-dark:not(body) .input-group-text,
+:root .theme-light .input-group-text,
+:root.theme-light:not(body) .input-group-text {
+    color: var(--color-text-main)
+}
 
-    --color-secondary:#3A4148;
+:root .theme-broadcaster .theme-dark2 .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster.theme-dark2:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster .theme-dark3 .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster.theme-dark3:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster .theme-dark .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster.theme-dark:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster .theme-light .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-broadcaster.theme-light:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-dark2 .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root.theme-dark2:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-dark3 .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root.theme-dark3:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-dark .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root.theme-dark:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root .theme-light .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled,
+:root.theme-light:not(body) .quickview-content-footer .btn-toolbar.btn-second-row .btn-detail:disabled {
+    color: #929292
+}
 
-    --color-active:#05A6FF;
+:root .theme-broadcaster .theme-light .navigable-layout-zone-group-body:first-child h6,
+:root .theme-broadcaster .theme-light .navigable-layout-zone-group-title,
+:root .theme-broadcaster.theme-light:not(body) .navigable-layout-zone-group-body:first-child h6,
+:root .theme-broadcaster.theme-light:not(body) .navigable-layout-zone-group-title,
+:root .theme-light .navigable-layout-zone-group-body:first-child h6,
+:root .theme-light .navigable-layout-zone-group-title,
+:root.theme-light:not(body) .navigable-layout-zone-group-body:first-child h6,
+:root.theme-light:not(body) .navigable-layout-zone-group-title {
+    color: var(--color-text-main)
+}
 
-    --color-disabled:#5F6973;
-    --color-disabled-bg:#32373C;
-
-    --color-light:#F5F5F5;
-    --color-light2:#D7DDE3;
-
-    --color-medium:#B0B7BE;
-    --color-medium-active:rgba(255,255,255,.08);
-
-    --color-medium2:#4A5158;
-    --color-medium2-active:rgba(255,255,255,.08);
-
-    --color-dark:#171717;
-    --color-dark2:#1A1E20;
-    --color-dark3:#23282C;
-
-    --color-placeholder:#7C8790;
-    --color-separator:#343A40;
-
-    --trouve-theme-bg:#171717;
-    --trouve-theme-light-on-dark:#F5F5F5;
-    --trouve-theme-text-color-inverse:#171717;
-
-    --trouve-theme-dropdown-bg:#1A1E20;
-    --trouve-theme-dropdown-header-text-color:#B0B7BE;
-
-    --trouve-theme-spinner-color-1:#05A6FF;
-
-    --trouve-theme-focus-color:rgba(5,166,255,.35);
-    --trouve-theme-hover-bg:rgba(255,255,255,.05);
-    --trouve-theme-selected-bg:rgba(5,166,255,.15);
-
-    --pm-sidebar-header-bg:#1A1E20;
-    --pm-sidebar-header-text-color:#F5F5F5;
-    --pm-sidebar-action-button-wrapper-bg:#1A1E20;
-    --pm-action-button-wrapper-button-color:#B0B7BE;
-
-    --pm-quickview-header-bg:#1A1E20;
-    --pm-quickview-content-bg:#171717;
-    --pm-right-detail-bg:#23282C;
-
-    --pm-cascading-menu-list-level1-bg-color:#171717;
-    --pm-cascading-menu-list-level2-bg-color:#1A1E20;
-    --pm-cascading-menu-list-level3-bg-color:#23282C;
-
-    --trouve-navbar-item-color:#B0B7BE;
-    --trouve-navbar-item-hover-color:#37B9FF;
-    --trouve-navbar-item-active-color:#05A6FF;
-
-    --trouve-navbar-primary-action-color:#05A6FF;
-    --trouve-navbar-primary-action-hover-color:#37B9FF;
-    --trouve-navbar-primary-action-active-color:#0287D1;
-
-    --trouve-navlink-item-color:#B0B7BE;
-    --trouve-navlink-hover-color:#37B9FF;
-    --trouve-navlink-active-color:#05A6FF;
-    --trouve-navlink-disabled-color:#5F6973;
-
-    --trouve-bootstrap-result-h1-bg:#1A1E20;
-    --trouve-bootstrap-navbar-bg:#171717;
-    --trouve-ng-select-dropdown-panel-bg:#23282C;
+:root .theme-broadcaster bs-datepicker-container .theme-green,
+:root .theme-broadcaster bs-datepicker-inline-container .theme-green,
+:root bs-datepicker-container .theme-green,
+:root bs-datepicker-inline-container .theme-green {
+    --color-text-main: #f0f0f0;
+    --color-disabled: #3d3d3d
 }
