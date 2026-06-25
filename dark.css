@@ -77,14 +77,14 @@ html {
 :root.theme-light:not(body) {
     --color-text-main: #f0f0f0;
     --color-bg-main: #121212;
-    --color-primary: #0B41FF;
-    --color-primary-hover: #3D6CFF;
-    --color-primary-active: #0830BF;
-    --color-accent: #0B41FF;
-    --color-accent-hover: #3D6CFF;
-    --color-accent-active: #0830BF;
+    --color-primary: #0000FF;
+    --color-primary-hover: #3333FF;
+    --color-primary-active: #0000CC;
+    --color-accent: #0000FF;
+    --color-accent-hover: #3333FF;
+    --color-accent-active: #0000CC;
     --color-secondary: #a0a0a0;
-    --color-active: #0B41FF;
+    --color-active: #0000FF;
     --color-disabled: #3d3d3d;
     --color-disabled-bg: var(--color-secondary);
     --color-denied: var(--color-danger);
